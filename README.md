@@ -1,8 +1,8 @@
 # Assignment 4 – SeqTrack Inference Evaluation
 
 **Course:** Image Processing  
-**Student:** Hossam Aladin  
-**Date:** October 25, 2025  
+**Team:** 8  
+ 
 
 ---
 
