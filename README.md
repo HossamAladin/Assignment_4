@@ -31,7 +31,7 @@ Key results
   - `testing/results/seqtrack/seqtrack_b256_XXX/lasot/*.txt` – Tracker outputs
   - `testing/results/seqtrack/seqtrack_b256_XXX/lasot/*_time.txt` – Per-sequence timing arrays
 - Final report
-  - `assignment_4_final_report.docx` – Final write-up with tables/figures
+  - `Assignment(4)` – Final write-up with tables/figures
 - Evaluation code & config
   - `SeqTrack/evaluate_checkpoints.py` – Evaluates checkpoints across epochs, writes JSON/logs and plots
   - `SeqTrack/experiments/seqtrack/seqtrack_b256.yaml` – Active experiment configuration used here
