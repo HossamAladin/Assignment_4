@@ -30,17 +30,17 @@ Key results
 - Per-epoch raw results
   - `testing/results/seqtrack/seqtrack_b256_XXX/lasot/*.txt` – Tracker outputs
   - `testing/results/seqtrack/seqtrack_b256_XXX/lasot/*_time.txt` – Per-sequence timing arrays
-- Final report
-  - `Assignment(4)` – Final write-up with tables/figures
+- Documentation (final report)
+  - `testing/Assignment(4).docx` – Project documentation with tables, figures, and reflections
 - Evaluation code & config
   - `SeqTrack/evaluate_checkpoints.py` – Evaluates checkpoints across epochs, writes JSON/logs and plots
   - `SeqTrack/experiments/seqtrack/seqtrack_b256.yaml` – Active experiment configuration used here
 
 ### How each requirement is satisfied
 - Full-length sequences (no frame sampling): evidenced by per-sequence totals in `testing/inference_logs/inference_log.txt`
-- Inference tables/graphs: present in the DOCX and PNGs under `testing/`
+- Inference tables/graphs: present in `testing/Assignment(4).docx` and the PNGs under `testing/`
 - Per-epoch (1–10) evaluation: summarized in the graphs and JSON; best epochs noted above
-- Reflections: included in the report
+- Reflections: included in `testing/Assignment(4).docx`
 - GitHub submission: this repository
 
 ### Reproduce the evaluation
@@ -76,6 +76,7 @@ Assignment_4/
 │   ├── tracking/                     # Test/train entry points
 │   └── lib/                          # Core libraries (models, eval utils)
 ├── testing/                          # All evaluation artifacts
+│   ├── Assignment(4).docx            # Final project documentation
 │   ├── evaluation_graph.png          # Overview metrics (IoU/Precision/AUC)
 │   ├── evaluation_auc_graph.png      # AUC vs epoch
 │   ├── evaluation_fps_graph.png      # FPS vs epoch
@@ -87,7 +88,6 @@ Assignment_4/
 │   └── results/seqtrack/seqtrack_b256_XXX/lasot/
 │       ├── <sequence>.txt            # Tracking outputs
 │       └── <sequence>_time.txt       # Per-sequence timings
-├── assignment_4_final_report.docx    # Final report
 └── README.md                         # This guide
 ```
 
