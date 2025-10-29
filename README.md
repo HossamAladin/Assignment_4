@@ -25,8 +25,8 @@ Key results
   - `testing/evaluation_class_auc.png` – Class-wise AUC
   - `testing/evaluation_class_precision.png` – Class-wise Precision
 - Logs and summaries
-  - `testing/inference_logs/inference_log.txt` – Per-sequence timings + per-epoch summary (frames, total time, FPS, ms/frame)
-  - `testing/evaluation_results.json` – Per-epoch metrics + timing (machine-readable)
+  - `testing/inference_logs/inference_log.txt` – Per-sequence timings + per-epoch summary (frames, total time, FPS, ms/frame) as recorded alongside the results.
+  - `testing/evaluation_results.json` – Per-epoch metrics with timing, written together with the analysis outputs.
 - Per-epoch raw results
   - `testing/results/seqtrack/seqtrack_b256_XXX/lasot/*.txt` – Tracker outputs
   - `testing/results/seqtrack/seqtrack_b256_XXX/lasot/*_time.txt` – Per-sequence timing arrays
@@ -40,7 +40,7 @@ Key results
 - Full-length sequences (no frame sampling): evidenced by per-sequence totals in `testing/inference_logs/inference_log.txt`
 - Inference tables/graphs: present in the DOCX and PNGs under `testing/`
 - Per-epoch (1–10) evaluation: summarized in the graphs and JSON; best epochs noted above
-- Reflections: included in the report (and also drafted in the project’s Markdown version earlier)
+- Reflections: included in the report
 - GitHub submission: this repository
 
 ### Reproduce the evaluation
