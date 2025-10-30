@@ -11,12 +11,15 @@ Repository: https://github.com/HossamAladin/Assignment_4.git
 - Epochs evaluated: 1â€“10 (full-length sequences, no frame sampling)
 - Metrics: IoU, Precision, AUC per epoch; FPS and ms/frame from per-sequence timings
 
-Key results
+### Overall Performance Highlights
+- IoU grew ~6Ã—: 4.21% (Epoch 1) â†’ 24.39% (Epoch 10)
+- Precision improved ~6.8Ã—: 3.48% (Epoch 1) â†’ 23.82% (Epoch 10)
+- Rapid learning: big jump from Epoch 4 â†’ 5 (2.53% â†’ 14.41% IoU)
+- Recovery and peak: dip at Epoch 7 (10.99% IoU) â†’ peak IoU 24.91% at Epoch 9
 
-- Best AUC: 24.91% (epoch 9)
-- Best IoU: 24.91% (epoch 9)
-- Best Precision: 27.24% (epoch 5)
-- Average FPS: ~18.30
+### Class-Specific Success
+- Airplane: IoU 3.99% â†’ 30.13% (Epoch 10); Precision 1.86% â†’ 41.35%
+- Coin: IoU 4.42% â†’ 18.64% (Epoch 10); Precision remains low at 6.28%
 
 ## Where to find things quickly
 
@@ -28,8 +31,8 @@ Key results
   - 	esting/evaluation_class_auc.png â€“ Class-wise AUC
   - 	esting/evaluation_class_precision.png â€“ Class-wise Precision
 - **Logs and summaries**
-  - 	esting/inference_logs/inference_log.txt â€“ Per-sequence timings + per-epoch summary (frames, total time, FPS, ms/frame) as recorded alongside the results.
-  - 	esting/evaluation_results.json â€“ Per-epoch metrics with timing, written together with the analysis outputs.
+  - 	esting/inference_logs/inference_log.txt â€“ Per-sequence timings + per-epoch summary (frames, total time, FPS, ms/frame)
+  - 	esting/evaluation_results.json â€“ Per-epoch metrics with timing
 - **Per-epoch raw results**
   - 	esting/results/seqtrack/seqtrack_b256_XXX/lasot/*.txt â€“ Tracker outputs
   - 	esting/results/seqtrack/seqtrack_b256_XXX/lasot/*_time.txt â€“ Per-sequence timing arrays
@@ -42,8 +45,8 @@ Key results
 ## How each requirement is satisfied
 
 - Full-length sequences (no frame sampling): evidenced by per-sequence totals in 	esting/inference_logs/inference_log.txt
-- Inference tables/graphs: present in 	esting/Assignment(4).docx and the PNGs under 	esting/
-- Per-epoch (1â€“10) evaluation: summarized in the graphs and JSON; best epochs noted above
+- Inference tables/graphs: present in 	esting/Assignment(4).docx and PNGs under 	esting/
+- Per-epoch (1â€“10) evaluation: summarized in graphs and JSON; best epochs noted above
 - Reflections: included in 	esting/Assignment(4).docx
 - GitHub submission: this repository
 
@@ -105,7 +108,17 @@ Assignment_4/
 
 ## Notes
 
-- Epoch 9 is the strongest overall (AUC/IoU); epoch 5 peaks in Precision.
+- Epoch 9 is the strongest overall (AUC/IoU); Epoch 5 peaks in Precision.
 - FPS remains ~18â€“19 across epochs (â‰ˆ52â€“56 ms/frame), indicating stable runtime.
-- Class-wise plots show airplane outperforming coin from epoch 5 onward.
+- Class-wise plots show airplane outperforming coin from Epoch 5 onward.
 
+## 8. Evaluation Setup
+- Model: SeqTrack-B256
+- Dataset: LaSOT (8 sequences: 4 airplane + 4 coin)
+- Epochs: 1â€“10 (80 runs total)
+- Environment: Windows 11, Python 3.x, PyTorch
+
+## 9. Key Findings
+- Overall learning: IoU ~6Ã— (4.21%â†’24.39%), Precision ~6.8Ã— (3.48%â†’23.82%).
+- Airplane specialization: IoU 30.13%, Precision 41.35% (Epoch 10).
+- Coin remains challenging: IoU 18.64%, Precision 6.28% (false positives high).
