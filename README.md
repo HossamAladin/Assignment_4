@@ -1,4 +1,4 @@
-﻿# Assignment 4 â€“ SeqTrack Inference Evaluation (Guide + Index)
+﻿# Assignment 4  SeqTrack Inference Evaluation (Guide + Index)
 
 This README maps every assignment requirement to the exact files/folders, summarizes the results, and guides you to graphs, logs, configs, and code. Itâ€™s the single entry point for anyone browsing this repo.
 
